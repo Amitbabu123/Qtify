@@ -9,7 +9,7 @@ function App() {
       <Navbar/>
       <HeroSection/>
       <Cart
-        followers={1000}
+        followers={100}
         title="New Bollywood"/>
     </div>
   );

@@ -1,13 +1,12 @@
 /* Cart.module.css */
 
 .maincard {
-    /* border: 1px solid #ccc; */
-    border-radius: 10px;
+    
     overflow: hidden;
     width: 159px;
     height: 232px;
     border-radius: 10px;
-    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,7 +20,7 @@
     height: 170px;
     width: 100%;
     overflow: hidden;
-    border-radius: 10px 10px 0px 0px;
+    
   }
   
   .image {
@@ -34,9 +33,8 @@
     background-color: white; /* Change the background color to white */
     width: 87%;
     height:35px;
-
     padding: 5px 10px; /* Add padding to the followers container */
-    border-radius: 0 0 4px 4px;
+    border-radius: 0 0 10px 10px;
     display: inline-block;
   }
   
@@ -67,11 +65,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 65px;
+
   }
   
   .title {
-    font-size: 14px;
+    font-family: Poppins; /* Set the font family to Poppins */
+    font-weight: 400; /* Set the font weight to 400 */
+    font-size: 14px; /* Set the font size to 14px */
+    line-height: 21px; /* Set the line height to 21px */
     margin-top: 5px;
-    color: #444;
+    color: #fff;
   }
   
