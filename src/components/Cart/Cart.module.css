@@ -1,0 +1,77 @@
+/* Cart.module.css */
+
+.maincard {
+    /* border: 1px solid #ccc; */
+    border-radius: 10px;
+    overflow: hidden;
+    width: 159px;
+    height: 232px;
+    border-radius: 10px;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 170px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px 10px 0px 0px;
+  }
+  
+  .image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .followersContainer {
+    background-color: white; /* Change the background color to white */
+    width: 87%;
+    height:35px;
+
+    padding: 5px 10px; /* Add padding to the followers container */
+    border-radius: 0 0 4px 4px;
+    display: inline-block;
+  }
+  
+.followers {
+    background-color: black;
+    color: #fff;
+    font-family: Poppins;
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 15px;
+    margin-right: 71px;
+    width: 71px; /* Set the width to 71px */
+    height: 23px; /* Set the height to 23px */
+    top: 176px; /* Set the top position to 176px */
+    left: 6px; /* Set the left position to 6px */
+    border-radius: 10px; /* Set the border radius to 10px */
+    padding: 4px 8px 4px 8px; /* Set padding: top right bottom left */
+    gap: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  
+  .content {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .title {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #444;
+  }
+  
