@@ -1,5 +1,8 @@
 .heroSection{
-    width: 100vw;
+    background-color: var(--color-black);
     height: 270px;
-    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
 }

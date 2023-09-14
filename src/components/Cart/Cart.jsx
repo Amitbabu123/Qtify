@@ -1,25 +1,35 @@
-// Cart.jsx
+import React from 'react';
+import styles from './Cart.module.css';
+import { Chip } from '@mui/material';
 
-import React from "react";
-import styles from "./Cart.module.css";
-import MovieImage from "../../assets/MovieImage.png"; // Import your image
+const Cart = ({ data, type }) => {
+  const getCard = (type) => {
+    switch (type) {
+      case "album": {
+        const { image, follows, title, songs } = data;
+        // Include additional content along with follows count
+        const chipLabel = `${follows} follows`;
 
-const Cart = ({ followers, title }) => {
-  return (
-    <div className={styles.maincard}>
-      <div className={styles.imageContainer}>
-        <img src={MovieImage} alt="cartImage" className={styles.image} />
-      </div>
-      <div className={styles.followersContainer}>
-        <div className={styles.followers}>
-          <span className={styles.followersCount}>{followers}</span> Followers
-        </div>
-      </div>
-      <div className={styles.content}>
-        <div className={styles.title}>{title}</div>
-      </div>
-    </div>
-  );
-};
+        return (
+          <div className={styles.wrapper}>
+            <div className={styles.cart}>
+              <img src={image} alt="album" />
+              <div className={styles.banner}>
+                {/* Use the modified chipLabel */}
+                <Chip className={styles.chip} label={chipLabel} size="small" />
+              </div>
+            </div>
+            <div className={styles.titleWrraper}>
+              <p>{title}</p>
+            </div>
+          </div>
+        );
+      }
+      default:
+        return <></>;
+    }
+  }
+  return getCard(type);
+}
 
 export default Cart;
