@@ -6,7 +6,7 @@ const Cart = ({ data, type }) => {
   const getCard = (type) => {
     switch (type) {
       case "album": {
-        const { image, follows, title, songs } = data;
+        const { image, follows, title } = data;
         // Include additional content along with follows count
         const chipLabel = `${follows} follows`;
 
