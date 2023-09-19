@@ -3,7 +3,6 @@ import './App.css';
 import { fetchTopAlbums } from './api/api';
 import Navbar from './components/NavBar/Navbar';
 import HeroSection from './components/HeroSection/HeroSection';
-import Cart from './components/Cart/Cart';
 import Section from './components/Section/Section';
 
 function App() {
