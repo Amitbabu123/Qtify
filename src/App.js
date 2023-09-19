@@ -4,6 +4,7 @@ import { fetchTopAlbums } from './api/api';
 import Navbar from './components/NavBar/Navbar';
 import HeroSection from './components/HeroSection/HeroSection';
 import Cart from './components/Cart/Cart';
+import Section from './components/Section/Section';
 
 function App() {
   const [topAlbumsData, setTopAlbumData] = useState([]); // Initialize with an empty array
@@ -25,9 +26,12 @@ function App() {
     <div className="App">
       <Navbar />
       <HeroSection />
-      {topAlbumsData.map((item) => (
+      {/* {topAlbumsData.map((item) => (
         <Cart key={item.id} data={item} type="album" />
-      ))}
+      ))} */}
+      <div>
+      <Section data={topAlbumsData} title="Top Album"/>
+    </div>
     </div>
   );
 }
