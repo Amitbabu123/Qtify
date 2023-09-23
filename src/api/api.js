@@ -11,3 +11,11 @@ export async function fetchTopAlbums() { // Mark the function as async
     }
 }
 
+export const fetchSongs = async () =>{
+    try{
+        const res = await axios.get(`${backendEndpoint}/songs`);
+        return res.data;
+    }catch(err){
+        console.error(err);
+    }
+};

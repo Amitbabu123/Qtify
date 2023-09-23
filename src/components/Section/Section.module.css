@@ -9,11 +9,11 @@
     align-items: baseline;
 
 }
-.toggleText{
+/* .toggleText{
     cursor: pointer;
     color: var(--color-primary);
-}
+} */
 .cardWrapper{
     margin-top: 18px;
 }
-.txtAlbum{margin-left: 10px;}
+/* .txtAlbum{margin-left: 10px;} */

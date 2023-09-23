@@ -1,4 +1,4 @@
-/* .wrapper{
+.wrapper{
   width: 160px;
   display: inline-block;
 }
@@ -20,84 +20,31 @@
   display: flex;
   align-items: center;
   padding: 6px;
+  .chip {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    /* padding: 4px 8px; 
+    border-radius: 4px;  */
+  }
 
 }
-.chip {
-  background-color: var(--color-black);
-  color: var(--color-white);
-  padding: 4px 8px; 
-  border-radius: 4px; 
-}
+
 .titleWrraper {
   margin-top: 6px;
   overflow: hidden;
   text-overflow: ellipsis;
 
 } 
-
-*/
-
-/* Cart.module.css */
-
-/* Default styles for vertical layout */
-.wrapper {
-  width: 160px;
-  display: inline-block;
-  margin-left: 45px;
-  
-}
-
-/* Cart.module.css */
-
-/* Add space between elements using space-between property */
-.cart {
-  position: relative;
-  width: 160px;
-  height: 205px;
-  border-radius: 10px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column; /* Stack elements vertically */
-  justify-content: space-between; /* Apply space between elements */
-  
-}
-
-
-.banner {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 42px;
-  background-color: var(--color-white);
-  display: flex;
-  align-items: center;
+.pill{
+  font-size: 12px;
+  background-color: var(--color-black);
+  width: max-content;
   padding: 6px;
+  border-radius: 10px;
   
 }
 
-.chip {
-  
-  background-color: var(--color-black) !important;
-  color: var(--color-white) !important;;
-  padding: 4px 8px; /* Add padding to Chip for spacing */
-  border-radius: 4px; /* Add border radius for a rounded appearance */
-}
 
-.titleWrraper {
-  margin-top: 6px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  
-}
-/* Cart.module.css */
-
-.cart img {
-  width: 100%;
-  height: auto; /* Maintain aspect ratio */
-  /* margin-bottom: 200px; */
- 
-}
 
 
 

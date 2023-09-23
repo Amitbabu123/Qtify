@@ -13,7 +13,7 @@
 .leftNavigation {
     cursor: pointer;
     position: absolute;
-    left: 10px; /* Change to 'left' */
+    left: 0px; /* Change to 'left' */
     top: 40%;
     transform: translateY(-50%);
     z-index: 10;
