@@ -6,6 +6,7 @@ import {fetchTopAlbums, fetchSongs} from './api/api';
 import Navbar from './components/NavBar/Navbar';
 import HeroSection from './components/HeroSection/HeroSection';
 import Section from './components/Section/Section';
+import FAQ from "./components/FAQ/FAQ"
 
 function App() {
   //Hmara previous code
@@ -105,6 +106,11 @@ function App() {
       <Section data={data} type="album" title="Top-Albums" filteredDataValues={data}/>
       <Section data={data} type="album" title="New-Albums" filteredDataValues={data}/>
       <Section data={data} type="song" title="Songs" filteredData={filteredData} filteredDataValues={filteredDataValues} value={value} handleToggle={handleToggle} handleChange={handleChange}/>
+    </div>
+
+    <h1 className={styles.heading}>FAQs</h1>
+    <div className={styles.faqs}>
+      <FAQ/>
     </div>
 
     </>

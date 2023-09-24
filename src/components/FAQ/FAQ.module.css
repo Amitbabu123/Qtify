@@ -1,0 +1,26 @@
+.faqAccordion{
+    margin-inline: 100px;
+}
+/* FAQ.module.css */
+.accordionSummary {
+    background-color: var(--color-black) !important; 
+    border: 1px solid var(--color-white) !important;
+    border-radius: 10px !important;
+    color: var(--color-white) !important;
+  }
+  
+   
+    .accordionDetails{
+        background-color: var(--color-white);
+        color: var(--color-black);
+        border-radius: 0px 0px 10px 10px;
+    }
+
+
+.accordionWrapper {
+    margin-block: 20px;
+}
+
+.expandIcon {
+    color: var(--color-primary);
+}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Section.module.css';
 import {Box, CircularProgress } from '@mui/material';
 import Cart from '../Cart/Cart';
@@ -34,37 +34,80 @@ import BasicTabs from '../Tabs/Tabs';
 //     </div>
 //   )
 // }
-const Section = ({ title, data, type, filteredDataValues = [], toggle = false, handleToggle = null, value = 0, handleChange = null }) => {
-    return (
-      <div>
-        <div className={styles.header}>
-          <h3>{title}</h3>
-          <h4 className={styles.toggleText} onClick={handleToggle}>
-            {!toggle ? "Show All" : "Collapse All"}
-          </h4>
-        </div>
-        {type === "song"?<BasicTabs value={value} handleChange={handleChange} /> : null}
-        {data.length === 0 ? (
-          <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-            <CircularProgress />
-          </Box>
-        ) : (
-          <div className={styles.cardsWrapper}>
-            {toggle ? (
-              <div className={styles.wrapper}>
-                {filteredDataValues.map(item => {
-                  return (
-                    <Cart data={item} type={type} />
-                  )
-                })}
-              </div>
-            ) : (
-              <Carousel data={filteredDataValues} component={(data) => <Cart data={data} type={type} />} />
-            )}
-          </div>
-        )}
-      </div>
-    )
+
+// ---------------------------------->This code showAll not Work
+// const Section = ({ title, data, type, filteredDataValues = [], toggle = false, handleToggle = null, value = 0, handleChange = null }) => {
+//     return (
+//       <div>
+//         <div className={styles.header}>
+//           <h3>{title}</h3>
+//           <h4 className={styles.toggleText} onClick={handleToggle}>
+//             {!toggle ? "Show All" : "Collapse All"}
+//           </h4>
+//         </div>
+//         {type === "song"?<BasicTabs value={value} handleChange={handleChange} /> : null}
+//         {data && data.length === 0 ? (
+//           <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+//             <CircularProgress />
+//           </Box>
+//         ) : (
+//           <div className={styles.cardsWrapper}>
+//             {toggle ? (
+//               <div className={styles.wrapper}>
+//                 {filteredDataValues.map(item => {
+//                   return (
+//                     <Cart data={item} type={type} />
+//                   )
+//                 })}
+//               </div>
+//             ) : (
+//               <Carousel data={filteredDataValues} component={(data) => <Cart data={data} type={type} />} />
+//             )}
+//           </div>
+//         )}
+//       </div>
+//     )
+//   };
+
+
+const Section = ({ title, data, type, filteredDataValues = [], value = 0, handleChange }) => {
+  const [toggle, setToggle] = useState(false); // Initialize toggle state as false
+
+  const handleToggle = () => {
+    setToggle(!toggle); // Toggle the state
   };
+
+  return (
+    <div>
+      <div className={styles.header}>
+        <h3>{title}</h3>
+        <h4 className={styles.toggleText} onClick={handleToggle}>
+          {toggle ? "Collapse All" : "Show All"} {/* Reverse the text */}
+        </h4>
+      </div>
+      {type === "song" ? <BasicTabs value={value} handleChange={handleChange} /> : null}
+      {data && data.length === 0 ? (
+        <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+          <CircularProgress />
+        </Box>
+      ) : (
+        <div className={styles.cardsWrapper}>
+          {toggle ? (
+            <div className={styles.wrapper}>
+              {filteredDataValues.map(item => {
+                return (
+                  <Cart data={item} type={type} />
+                )
+              })}
+            </div>
+          ) : (
+            <Carousel data={filteredDataValues} component={(data) => <Cart data={data} type={type} />} />
+          )}
+        </div>
+      )}
+    </div>
+  )
+};
+
   
   export default Section;
